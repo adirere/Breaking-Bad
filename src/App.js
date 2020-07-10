@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const result = await axios(`${url}?name=${query}`);
+        const result = await axios(`${url}`);
         setItems(result.data);
         setIsLoading(false);
       } catch (error) {
@@ -24,13 +24,21 @@ const App = () => {
     };
 
     fetchItems();
-  }, [query]);
+  }, []);
+
+  const getQuery = e => {
+    setQuery(
+      items.filter(item =>
+        item.name.toLowerCase().includes(e.trim().toLowerCase())
+      )
+    );
+  };
 
   return (
     <div>
       <Header />
-      <Search getQuery={e => setQuery(e)} />
-      <CharacterGrid isLoading={isLoading} items={items} />
+      <Search getQuery={getQuery} />
+      <CharacterGrid isLoading={isLoading} items={items} query={query} />
     </div>
   );
 };
