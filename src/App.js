@@ -35,10 +35,19 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        aligItems: "center",
+        justifyContent: "center"
+      }}
+    >
       <Header />
       <Search getQuery={getQuery} />
-      <CharacterGrid isLoading={isLoading} items={items} query={query} />
+      <div style={{ margin: "auto", width: "95%" }}>
+        <CharacterGrid isLoading={isLoading} items={items} query={query} />
+      </div>
     </div>
   );
 };
