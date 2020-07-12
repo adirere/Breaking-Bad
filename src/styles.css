@@ -34,3 +34,56 @@ input[type="text"] {
   margin: auto;
   text-align: center;
 }
+
+.bubbles {
+  animation: bubblesAnimate 5s infinite;
+}
+.liquid {
+  animation: liquidAnimate 5s infinite;
+}
+.liquidBase {
+  animation: liquidBaseAnimate 3s infinite;
+}
+
+@keyframes bubblesAnimate {
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes liquidAnimate {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(-1, 1) translate(-10px, 0);
+    transform-origin: center;
+  }
+}
+
+@keyframes liquidBaseAnimate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
