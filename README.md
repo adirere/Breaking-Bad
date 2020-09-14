@@ -1,5 +1,7 @@
 # Breaking Bad Stats
 
+![Breaking Bad App Print Screen](https://uploads.codesandbox.io/uploads/user/3da8032e-cd8c-4966-8d2b-a74f580418b9/-NPE-Breaking_Bad.png)
+
 An app that shows some stats for the main characters of the Breaking Bad series.
 
 You can live-view the stats here: https://xtd5f.csb.app/
